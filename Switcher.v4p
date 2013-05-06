@@ -1,0 +1,123 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base - T16x9v26\Subpatches\Switcher.v4p" systemname="Switcher" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base - T16x9v26\Subpatches\Switcher.v4p">
+   <BOUNDS type="Window" left="9075" top="3735" width="9000" height="6000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="0" nodename="CreateNode (VVVV)" systemname="CreateNode (VVVV)">
+   <BOUNDS height="100" left="615" top="3675" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Node Name" visible="1">
+   </PIN>
+   <PIN pinname="Parent Patch">
+   </PIN>
+   <PIN pinname="Node ID">
+   </PIN>
+   <PIN pinname="Create Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Dir (File)" nodename="Dir (File)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="600" top="1395" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Directory">
+   </PIN>
+   <PIN pinname="Mask">
+   </PIN>
+   <PIN pinname="Update" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Include Subdirectories" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Filenames" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="765" top="570" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="765" top="570" width="1470" height="285">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="..\Applications" encoded="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Directory">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="1" dstpinname="Directory">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="3" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="615" top="75" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="615" top="75" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="Main.v4p" encoded="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="*.*" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="*.*" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output String" dstnodeid="1" dstpinname="Mask">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="5" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="825" top="2310" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="825" top="2310" width="945" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="callmenames.v4p" encoded="0">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="callmenames.v4p" encoded="0">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="|Patch (*.v4p)||*.v4p|" encoded="0">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="Filename">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Parent Patch|" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output String" dstnodeid="0" dstpinname="Parent Patch">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="6" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="1095" top="2850" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1095" top="2850" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Node ID|" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Node ID">
+   </LINK>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="600" top="1920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Filenames" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="0" dstpinname="Node Name">
+   </LINK>
+   <NODE systemname="OnOpen (VVVV)" nodename="OnOpen (VVVV)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="3885" top="1995" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Bang" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Bang" dstnodeid="0" dstpinname="Create Node">
+   </LINK>
+   </PATCH>

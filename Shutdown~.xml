@@ -1,0 +1,177 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta26.dtd" >
+   <PATCH nodename="C:\Program Files\VVVV\Touch Base - T16x9v26\Subpatches\Shutdown.v4p" systemname="Shutdown" filename="C:\Program Files\VVVV\Touch Base - T16x9v26\Subpatches\Shutdown.v4p">
+   <BOUNDS type="Window" left="9375" top="3540" width="9000" height="6000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="3" nodename="DoQuit (VVVV)" systemname="DoQuit (VVVV)">
+   <BOUNDS height="100" left="1470" top="3240" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="1470" top="3240" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="1470" top="4755" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Quit VVVV" visible="1">
+   </PIN>
+   <PIN pinname="Query Save" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="2" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
+   <BOUNDS height="100" left="1470" top="2730" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="1455" top="2445" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="1320" top="4425" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="1" nodename="Keyboard (System Global)" systemname="Keyboard (System Global)">
+   <BOUNDS height="100" left="3060" top="510" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="3060" top="510" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="1365" top="4470" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Keyboard Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="0" nodename="KeyMatch (String)" systemname="KeyMatch (String)">
+   <BOUNDS height="100" left="2040" top="1515" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="2040" top="1425" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="1695" top="5550" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN encoded="0" pinname="Key Match" slicecount="1" values="|&lt;ESCAPE&gt;&cr;&lf;|">
+   </PIN>
+   <PIN pinname="&lt;ESCAPE&gt; Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Esc" encoded="0">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="0" dstpinname="Input" hiddenwhenlocked="0" srcnodeid="1" srcpinname="Keyboard Output" linkstyle="Bezier">
+   <LINKPOINT x="3085" y="1128">
+   </LINKPOINT>
+   <LINKPOINT x="2075" y="1123">
+   </LINKPOINT>
+   </LINK>
+   <LINK dstnodeid="3" dstpinname="Quit VVVV" srcnodeid="2" srcpinname="Output">
+   </LINK>
+   <NODE systemname="Shutdown (Windows)" nodename="Shutdown (Windows)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3645" top="3240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Do it" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="5" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
+   <BOUNDS height="100" left="4410" top="2730" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="0" left="4395" top="2730" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="1320" top="4425" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="4" dstpinname="Do it">
+   </LINK>
+   <NODE systemname="KeyMatch (String)" nodename="KeyMatch (String)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="4470" top="1500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Key Match" slicecount="1" values="&lt;TAB&gt;Q" encoded="0">
+   </PIN>
+   <PIN pinname="&lt;TAB&gt; Output" visible="1">
+   </PIN>
+   <PIN pinname="Q Output" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|TAB Q|" encoded="0">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="4950" top="2115" width="525" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="&lt;TAB&gt; Output" dstnodeid="8" dstpinname="Input 1" linkstyle="Bezier">
+   <LINKPOINT x="4530" y="1928">
+   </LINKPOINT>
+   <LINKPOINT x="4935" y="1928">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Q Output" dstnodeid="8" dstpinname="Input 2" linkstyle="Bezier">
+   <LINKPOINT x="5895" y="1928">
+   </LINKPOINT>
+   <LINKPOINT x="5475" y="1928">
+   </LINKPOINT>
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="210" top="1440" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="210" top="1440" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||" encoded="0">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Disable" encoded="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Keyboard Output" dstnodeid="7" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="3200" y="1128">
+   </LINKPOINT>
+   <LINKPOINT x="4375" y="1123">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="&lt;ESCAPE&gt; Output" dstnodeid="2" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="5" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="210" top="1980" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="2" dstpinname="Switch" linkstyle="Bezier">
+   <LINKPOINT x="270" y="2475">
+   </LINKPOINT>
+   <LINKPOINT x="1470" y="2475">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="5" dstpinname="Switch" linkstyle="Bezier">
+   <LINKPOINT x="270" y="2475">
+   </LINKPOINT>
+   <LINKPOINT x="4410" y="2475">
+   </LINKPOINT>
+   </LINK>
+   </PATCH>

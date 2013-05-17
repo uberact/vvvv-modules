@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
-   <PATCH nodename="D:\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Subpatches\State.v4p" systemname="State" filename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Subpatches\State.v4p">
-   <BOUNDS type="Window" left="9630" top="2025" width="9000" height="7950">
+   <PATCH nodename="D:\GitHub\UBE-5-DS-KinectMachines\Touch-Base_KinectMachines\Application\KinectMachines\Modules\State.v4p" systemname="State" filename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Subpatches\State.v4p">
+   <BOUNDS type="Window" left="14715" top="2130" width="9000" height="7950">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
    <BOUNDS type="Node" left="1731" top="5970" width="0" height="0">
@@ -38,6 +38,8 @@
    <PIN pinname="File Mask" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="R (String Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (String Advanced)" componentmode="Hidden" id="5">
@@ -177,7 +179,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="2790" top="2775" width="100" height="100">
+   <BOUNDS type="Node" left="2790" top="2775" width="1155" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -193,17 +195,17 @@
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Select">
    </LINK>
    <NODE systemname="R (Value Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (Value Advanced)" componentmode="Hidden" id="21">
-   <BOUNDS type="Node" left="6180" top="1800" width="100" height="100">
+   <BOUNDS type="Node" left="7620" top="1755" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6180" top="1800">
+   <BOUNDS type="Box" left="7620" top="1755">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="22" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="6180" top="1245" width="0" height="0">
+   <BOUNDS type="Node" left="7620" top="1200" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="6180" top="1245" width="795" height="240">
+   <BOUNDS type="Box" left="7620" top="1200" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="Reset">
    </PIN>
@@ -217,7 +219,7 @@
    <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="21" dstpinname="Receive String">
    </LINK>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="5715" top="2775" width="100" height="100">
+   <BOUNDS type="Node" left="7155" top="2730" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -231,9 +233,9 @@
    <LINK srcnodeid="23" srcpinname="Output" dstnodeid="17" dstpinname="Input 3">
    </LINK>
    <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="24">
-   <BOUNDS type="Node" left="5730" top="2295" width="100" height="100">
+   <BOUNDS type="Node" left="7170" top="2250" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5730" top="2295" width="795" height="240">
+   <BOUNDS type="Box" left="7170" top="2250" width="795" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="Menu">
    </PIN>
@@ -241,5 +243,39 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="23" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="1530" top="2550" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1530" top="2550" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Former Slice" dstnodeid="25" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="S (String Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="S (String Advanced)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="3165" top="1605" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <BOUNDS type="Box" left="3165" top="1605">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="26" dstpinname="Send String">
+   </LINK>
+   <NODE systemname="NIL (String)" nodename="NIL (String)" componentmode="Hidden" id="27" filename="%VVVV%\lib\nodes\modules\String\NIL (String).v4p">
+   <BOUNDS type="Node" left="3150" top="1170" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Output" dstnodeid="26" dstpinname="Input">
    </LINK>
    </PATCH>

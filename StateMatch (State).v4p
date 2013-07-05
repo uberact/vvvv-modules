@@ -57,7 +57,7 @@
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="3" dstpinname="Input 1">
    </LINK>
    <NODE id="4" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="|State Input|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="|State Match|">
    </PIN>
    <BOUNDS type="Box" left="1608" top="360" width="750" height="240">
    </BOUNDS>

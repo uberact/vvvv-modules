@@ -1,0 +1,261 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta30.dtd" >
+   <PATCH nodename="D:\GitHub\MSK-3-RFU-RugbyFace\Touch-Base_RugbyFace\Application\RugbyFace\modules\Keyboard\TouchKeyboard.v4p" systemname="FB-Keyboard" filename="C:\Users\Uberact\Documents\GitHub\MAS-1-EE-MyUniverse\MAS-1-EE-MyUniverse\Application\MyUniverse\Subpatches\Facebook-Login\Subpatches\FB-Keyboard.v4p">
+   <BOUNDS type="Window" left="15855" top="810" width="14400" height="15600">
+   </BOUNDS>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="16" systemname="IOBox (Node)">
+   <BOUNDS type="Node" left="660" top="10575" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="660" top="10575" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Layer">
+   </PIN>
+   <PIN pinname="Input Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" hiddenwhenlocked="1">
+   <BOUNDS type="Node" left="9075" top="2025" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9075" top="2025" width="1140" height="240">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Real">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Enable">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="True">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="26">
+   <BOUNDS type="Node" left="660" top="9630" width="7620" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Layer" dstnodeid="16" dstpinname="Input Node">
+   </LINK>
+   <NODE componentmode="InABox" id="66" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="2310" top="915" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="2310" top="915" type="Box" width="930">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="iXY">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="3" values="0,0,0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="124" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="3540" top="5640" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3540" top="5640" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" encoded="0" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" encoded="0" values="Enter">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="26" dstpinname="Enabled">
+   </LINK>
+   <NODE systemname="KeyboardGraphics" filename="Subpatches\KeyboardGraphics.v4p" nodename="Subpatches\KeyboardGraphics.v4p" componentmode="Hidden" id="131">
+   <BOUNDS type="Node" left="660" top="5250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Caps Active" visible="1">
+   </PIN>
+   <PIN pinname="Character" visible="1" slicecount="1" values="72">
+   </PIN>
+   <PIN pinname="Enable" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="131" dstpinname="Enable">
+   </LINK>
+   <LINK srcnodeid="131" srcpinname="Layer" dstnodeid="26" dstpinname="Layer 1">
+   </LINK>
+   <NODE systemname="KeyboardKeys" filename="Subpatches\KeyboardKeys.v4p" nodename="Subpatches\KeyboardKeys.v4p" componentmode="Hidden" id="130">
+   <BOUNDS type="Node" left="2355" top="3810" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="2715" top="450" width="14625" height="15600">
+   </BOUNDS>
+   <PIN pinname="Caps Active" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Character" visible="1">
+   </PIN>
+   <PIN pinname="Enter" visible="1">
+   </PIN>
+   <PIN pinname="iXY" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="130" srcpinname="Layer" dstnodeid="26" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="130" srcpinname="Enter" dstnodeid="124" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="130" dstpinname="iXY">
+   </LINK>
+   <LINK srcnodeid="130" srcpinname="Caps Active" dstnodeid="131" dstpinname="Caps Active">
+   </LINK>
+   <LINK srcnodeid="130" srcpinname="Character" dstnodeid="131" dstpinname="Character">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="147">
+   <BOUNDS type="Node" left="645" top="2325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="TranslateY" slicecount="1" values="-0.44">
+   </PIN>
+   <PIN pinname="ScaleX" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="147" srcpinname="Transform Out" dstnodeid="130" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="147" srcpinname="Transform Out" dstnodeid="131" dstpinname="Transform In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="148" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1140" top="1710" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1140" top="1710" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0.995">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="148" srcpinname="Y Output Value" dstnodeid="147" dstpinname="ScaleY">
+   </LINK>
+   <LINK srcnodeid="148" srcpinname="Y Output Value" dstnodeid="147" dstpinname="ScaleX">
+   </LINK>
+   <NODE systemname="KeyboardTextTexture" filename="Subpatches\KeyboardTextTexture.v4p" nodename="Subpatches\KeyboardTextTexture.v4p" componentmode="InAWindow" id="151">
+   <BOUNDS type="Node" left="5742" top="7388" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1882" top="1733" width="7720" height="11310">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13545" top="2355" width="9840" height="12525">
+   </BOUNDS>
+   <PIN pinname="Character" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="130" srcpinname="Character" dstnodeid="151" dstpinname="Character">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="152" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6555" top="6240" width="1335" height="645">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6555" top="6240" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="39">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Max Characters|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="23">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="152" srcpinname="Y Output Value" dstnodeid="151" dstpinname="Max Characters">
+   </LINK>
+   <LINK srcnodeid="151" srcpinname="Layer" dstnodeid="26" dstpinname="Layer 3">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="153" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7860" top="2205" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7860" top="2205" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Initialize">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="153" srcpinname="Y Output Value" dstnodeid="151" dstpinname="Initialize">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="154" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="6870" top="2190" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6870" top="2190" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Initial Text|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="154" srcpinname="Output String" dstnodeid="151" dstpinname="Initial Text">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="155" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="5730" top="3195" width="1380" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5730" top="3195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Transform Text|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="155" srcpinname="Output Node" dstnodeid="151" dstpinname="Transform">
+   </LINK>
+   </PATCH>

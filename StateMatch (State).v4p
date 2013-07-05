@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
-   <PATCH nodename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Subpatches\State-Match.v4p" systemname="State-Match" filename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Subpatches\State-Match.v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta30.2.dtd" >
+   <PATCH nodename="D:\GitHub\MSK-3-RFU-RugbyFace\Touch-Base_RugbyFace\Application\RugbyFace\modules\StateMatch (State).v4p" systemname="State-Match" filename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Subpatches\State-Match.v4p">
    <BOUNDS type="Window" left="10500" top="2265" width="4050" height="4275">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
@@ -14,6 +14,8 @@
    <PIN pinname="File Mask" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Receive">
    </PIN>
    </NODE>
    <NODE systemname="R (String Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (String Advanced)" componentmode="Hidden" id="1">

@@ -3,9 +3,9 @@
    <BOUNDS type="Window" left="14715" top="2130" width="13395" height="11025">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="10056" top="504" width="0" height="0">
+   <BOUNDS type="Node" left="10524" top="456" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="10056" top="504" width="792" height="240">
+   <BOUNDS type="Box" left="10524" top="456" width="792" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="State">
    </PIN>
@@ -77,13 +77,13 @@
    </PIN>
    </NODE>
    <NODE systemname="S (String Advanced)" nodename="S (String Advanced)" componentmode="Hidden" id="0" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll">
-   <BOUNDS type="Node" left="9888" top="6360" width="240" height="276">
+   <BOUNDS type="Node" left="10356" top="6300" width="240" height="276">
    </BOUNDS>
    <PIN pinname="Input Value" visible="1">
    </PIN>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <BOUNDS type="Box" left="9888" top="6360">
+   <BOUNDS type="Box" left="10356" top="6300">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="0" dstpinname="Send String">
@@ -207,7 +207,7 @@
    <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="21" dstpinname="Receive String">
    </LINK>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="6828" top="2892" width="1125" height="270">
+   <BOUNDS type="Node" left="6828" top="3276" width="1125" height="270">
    </BOUNDS>
    <PIN pinname="Select" visible="1">
    </PIN>
@@ -267,9 +267,9 @@
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="28" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="28" srcpinname="Output" dstnodeid="0" dstpinname="Input" linkstyle="VHV">
-   <LINKPOINT x="396" y="6066">
+   <LINKPOINT x="552" y="6046">
    </LINKPOINT>
-   <LINKPOINT x="9888" y="6066">
+   <LINKPOINT x="10200" y="6026">
    </LINKPOINT>
    </LINK>
    <LINK srcnodeid="28" srcpinname="Output" dstnodeid="12" dstpinname="Input String">
@@ -295,7 +295,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="31">
-   <BOUNDS type="Node" left="7911" top="2325" width="1116" height="276">
+   <BOUNDS type="Node" left="7911" top="2697" width="1116" height="276">
    </BOUNDS>
    <PIN pinname="Switch" visible="1">
    </PIN>
@@ -305,10 +305,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="31" dstpinname="Switch">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="31" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="23" dstpinname="Select">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="32">
    <BOUNDS type="Node" left="3600" top="1308" width="100" height="100">
@@ -321,9 +317,9 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="32" dstpinname="Input 2" linkstyle="VHV">
-   <LINKPOINT x="10080" y="1044">
+   <LINKPOINT x="10392" y="1012">
    </LINKPOINT>
-   <LINKPOINT x="3768" y="1044">
+   <LINKPOINT x="3924" y="1028">
    </LINKPOINT>
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
@@ -347,5 +343,37 @@
    <LINK srcnodeid="32" srcpinname="Output" dstnodeid="5" dstpinname="Receive String">
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="28" dstpinname="Default">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="8976" top="2232" width="900" height="276">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="37">
+   <BOUNDS type="Node" left="9828" top="1308" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9828" top="1308" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="37" srcpinname="Y Output Value" dstnodeid="34" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Output" dstnodeid="23" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="34" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="31" dstpinname="Input 2">
    </LINK>
    </PATCH>

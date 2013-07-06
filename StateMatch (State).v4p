@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta30.2.dtd" >
-   <PATCH nodename="C:\Users\Uberact\Documents\GitHub\vvvv-modules\StateMatch (State).v4p" systemname="State-Match" filename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Subpatches\State-Match.v4p">
-   <BOUNDS type="Window" left="10500" top="2265" width="4050" height="4275">
+   <PATCH nodename="C:\Users\Uberact\Documents\GitHub\MSK-3-RFU-RugbyFace\Touch-Base_RugbyFace\Application\RugbyFace\modules\StateMatch (State).v4p" systemname="State-Match" filename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Subpatches\State-Match.v4p">
+   <BOUNDS type="Window" left="10500" top="2265" width="5160" height="4275">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="0" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="408" top="360" width="0" height="0">
+   <BOUNDS type="Node" left="2832" top="180" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="408" top="360" width="792" height="240">
+   <BOUNDS type="Box" left="2832" top="180" width="792" height="240">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" values="State">
    </PIN>
@@ -50,7 +50,11 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Output String" dstnodeid="1" dstpinname="Receive String">
+   <LINK srcnodeid="0" srcpinname="Output String" dstnodeid="1" dstpinname="Receive String" linkstyle="VHV">
+   <LINKPOINT x="2832" y="642">
+   </LINKPOINT>
+   <LINKPOINT x="468" y="702">
+   </LINKPOINT>
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="2" dstpinname="Input String">
    </LINK>
@@ -59,9 +63,9 @@
    <NODE id="4" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|State Match|">
    </PIN>
-   <BOUNDS type="Box" left="1608" top="360" width="750" height="240">
+   <BOUNDS type="Box" left="1608" top="180" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1608" top="360" width="750" height="240">
+   <BOUNDS type="Node" left="1608" top="180" width="750" height="240">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Output String" dstnodeid="3" dstpinname="Input 2">

@@ -89,6 +89,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Space">
+   </PIN>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Output String" dstnodeid="6" dstpinname="Input 2">
    </LINK>

@@ -1,0 +1,53 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta29.2.dtd" >
+   <PATCH nodename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\modules\State-Reset.v4p" systemname="State-Reset" filename="C:\Users\Uberact\Documents\GitHub\PUL-4-MUS-EmiratesICE\Touch-Base_EmiratesICE\Application\EmiratesICE\Modules\State-Reset.v4p">
+   <BOUNDS type="Window" left="7530" top="7395" width="2865" height="3795">
+   </BOUNDS>
+   <NODE systemname="R (String Advanced)" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll" nodename="R (String Advanced)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="540" top="744" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="540" top="744">
+   </BOUNDS>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="540" top="384" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="540" top="384" width="792" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="State">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="send">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Output String" dstnodeid="2" dstpinname="Receive String">
+   </LINK>
+   <NODE systemname="Change (String)" nodename="Change (String)" componentmode="Hidden" id="0">
+   <BOUNDS type="Node" left="540" top="1128" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="OnChange" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="0" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="3" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="552" top="1704" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="552" top="1704" width="792" height="240">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="OnChange" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>

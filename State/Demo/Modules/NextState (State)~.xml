@@ -1,0 +1,143 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.2.dtd" >
+   <PATCH nodename="C:\Users\Gareth Griffiths\Documents\GitHub\PathPlotter\PathVectorPlotter\Nodes\Modules\State\NextState (State).v4p" systemname="NextState (State)" filename="C:\Users\Gareth Griffiths\Documents\GitHub\PathPlotter\PathVectorPlotter\Nodes\Modules\State\NextState (State).v4p">
+   <BOUNDS type="Window" left="8550" top="3585" width="6435" height="8775">
+   </BOUNDS>
+   <NODE systemname="CurrentState (State)" filename="CurrentState (State).v4p" nodename="CurrentState (State)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="2145" top="2640" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2145" top="2640">
+   </BOUNDS>
+   <PIN pinname="State" visible="1">
+   </PIN>
+   <PIN pinname="State Name" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="1275" top="3555" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filter" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Comparison" slicecount="1" values="Matches">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Hits" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="1455" top="4320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="840" top="4875" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="5" dstpinname="Index">
+   </LINK>
+   <NODE id="6" systemname="IOBox (String)" componentmode="InABox" nodename="IOBox (String)">
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   <BOUNDS type="Box" left="840" top="5475" width="750" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="840" top="5475" width="750" height="240">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="6" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="State" dstnodeid="3" dstpinname="Filter" linkstyle="Bezier">
+   <LINKPOINT x="2130" y="3233">
+   </LINKPOINT>
+   <LINKPOINT x="1515" y="3233">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Input Index" dstnodeid="4" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="840" top="1020" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="840" top="1020" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="State">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="send">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|State Name|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="825" top="2175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="Space">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="8" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="990" top="1695" width="1050" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="990" top="1695" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="|State List|">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output String" dstnodeid="9" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="9" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="R (String Advanced)" nodename="R (String Advanced)" componentmode="Hidden" id="10" filename="%VVVV%\addonpack\lib\nodes\plugins\RSNodes.dll">
+   <BOUNDS type="Node" left="825" top="2640" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="825" top="2640">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="10" dstpinname="Receive String">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="1" dstpinname="State Name" linkstyle="Bezier">
+   <LINKPOINT x="900" y="1943">
+   </LINKPOINT>
+   <LINKPOINT x="2145" y="1943">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="3" dstpinname="Input" linkstyle="Bezier">
+   <LINKPOINT x="885" y="3233">
+   </LINKPOINT>
+   <LINKPOINT x="1275" y="3233">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="5" dstpinname="Input">
+   </LINK>
+   </PATCH>

@@ -1,0 +1,207 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Users\Gareth Griffiths\Documents\GitHub\States\modules\Consecutive (State).v4p" systemname="NextPrevious (State)" filename="C:\Users\Gareth Griffiths\Documents\GitHub\States\Modules\NextPrevious (State).v4p">
+   <BOUNDS type="Window" left="3165" top="0" width="7695" height="8850">
+   </BOUNDS>
+   <NODE systemname="CurrentState (State)" filename="CurrentState (State).v4p" nodename="CurrentState (State)" componentmode="Hidden" id="1">
+   <BOUNDS type="Node" left="3540" top="2925" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3540" top="2925">
+   </BOUNDS>
+   <PIN pinname="State" visible="1">
+   </PIN>
+   <PIN pinname="State Name" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Sift (String)" nodename="Sift (String)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="3375" top="3675" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filter" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Comparison" slicecount="1" values="Matches">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   <PIN pinname="Hits" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="3540" top="4635" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="GetSlice (String)" nodename="GetSlice (String)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="2655" top="6285" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="State" dstnodeid="3" dstpinname="Filter" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Input Index" dstnodeid="4" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2655" top="1260" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2655" top="1260" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="State">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="send">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|State Name|">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="1" dstpinname="State Name" linkstyle="VHV">
+   <LINKPOINT x="2545" y="1770">
+   </LINKPOINT>
+   <LINKPOINT x="3710" y="1785">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="11">
+   <BOUNDS type="Node" left="1890" top="1260" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1890" top="1260" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Next">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="1065" top="1260" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1065" top="1260" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Previous">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="13">
+   <BOUNDS type="Node" left="3930" top="4635" width="300" height="270">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Input Index" dstnodeid="13" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4170" top="4065" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4170" top="4065" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="4" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="3270" top="5160" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="15" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="15" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="15" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="5" dstpinname="Index">
+   </LINK>
+   <NODE systemname="SendState (State)" filename="SendState (State).v4p" nodename="SendState (State)" componentmode="Hidden" id="20">
+   <BOUNDS type="Node" left="2655" top="7185" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send State" visible="1">
+   </PIN>
+   <PIN pinname="Hit" visible="1">
+   </PIN>
+   <PIN pinname="State Name" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2655" top="7185">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="20" dstpinname="Send State">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="21">
+   <BOUNDS type="Node" left="1305" top="2580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output" dstnodeid="20" dstpinname="Hit">
+   </LINK>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="20" dstpinname="State Name">
+   </LINK>
+   <NODE systemname="StateList (State)" filename="modules\StateList (State).v4p" nodename="StateList (State)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="2655" top="2310" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13695" top="5565" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="State Name" visible="1">
+   </PIN>
+   <PIN pinname="State List" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2655" top="2310">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="23" dstpinname="State Name">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="State List" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="State List" dstnodeid="5" dstpinname="Input">
+   </LINK>
+   </PATCH>

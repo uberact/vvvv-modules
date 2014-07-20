@@ -1,0 +1,335 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Users\Gareth Griffiths\Documents\GitHub\vvvv-modules\Kinect2\Kinect2DataSample\Subpatches\SkeletonX2.v4p" systemname="SkeletonX2" filename="C:\Users\Gareth Griffiths\Documents\GitHub\vvvv-modules\Kinect2\Kinect2DataSample\Subpatches\SkeletonX2.v4p">
+   <BOUNDS type="Window" left="0" top="0" width="18165" height="15600">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="41" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5355" top="2580" width="1830" height="4740">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5355" top="2580" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Joint ID|">
+   </PIN>
+   <PIN pinname="Input String" visible="1" slicecount="25" values="SpineBase,SpineMid,Neck,Head,ShoulderLeft,ElbowLeft,WristLeft,HandLeft,ShoulderRight,ElbowRight,WristRight,HandRight,HipLeft,KneeLeft,AnkleLeft,FootLeft,HipRight,KneeRight,AnkleRight,FootRight,SpineShoulder,HandTipLeft,ThumbLeft,HandTipRight,ThumbRight">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="True">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7275" top="2580" width="2355" height="4800">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7275" top="2580" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="75" values="-0.56,-0.08,1.9,-0.135796040296555,0.230713531374931,1.90406966209412,-0.137052968144417,0.522043168544769,1.91169631481171,-0.144852370023727,0.663927316665649,1.8707355260849,-0.299823433160782,0.427637487649918,1.96259784698486,-0.43,0.25155583024025,2.03788375854492,-0.48,0.0712147653102875,1.93273901939392,0.85,2,1.88401353359222,0.038711991161108,0.413298279047012,1.89015412330627,0.249188959598541,0.320007652044296,1.8450254201889,0.275719106197357,0.504995584487915,1.70733428001404,0.275938779115677,0.571623802185059,1.70486235618591,-0.199493959546089,6.92,1.85922431945801,-0.202833563089371,-0.514147937297821,1.84734284877777,-0.192086726427078,-0.803642809391022,1.84863233566284,-0.214262813329697,-0.874317705631256,1.77303242683411,-0.0650307387113571,-0.0722163766622543,1.83664703369141,-0.0284566655755043,-0.529775857925415,1.84469139575958,-0.0236169267445803,-0.824519395828247,1.85652613639832,0.0112622752785683,-1.55,1.78038990497589,-0.136830374598503,0.450923711061478,1.91195714473724,-0.283240914344788,-0.038681223988533,1.82521736621857,-0.258186101913452,0.0766173452138901,1.83233690261841,0.2912437915802,0.642320036888122,1.69853091239929,0.227675020694733,0.571298062801361,1.68204843997955">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Joint PositionXYZ|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="True">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="46" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9900" top="2490" width="2355" height="4800">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9900" top="2490" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="75" values="-0.43,-0.08,1.87,-0.135796040296555,0.230713531374931,1.90406966209412,-0.137052968144417,0.522043168544769,1.91169631481171,-0.144852370023727,0.663927316665649,1.8707355260849,-0.299823433160782,0.427637487649918,1.96259784698486,-0.42491626739502,0.25155583024025,2.03788375854492,-0.342426717281342,0.0712147653102875,1.93273901939392,-0.02,0.0567322857677937,1.88401353359222,0.09,0.413298279047012,1.89015412330627,0.24,0.320007652044296,1.8450254201889,0.275719106197357,0.504995584487915,1.70733428001404,0.275938779115677,0.571623802185059,1.70486235618591,-0.199493959546089,-0.0722049325704575,1.85922431945801,-0.202833563089371,-0.514147937297821,1.84734284877777,-0.192086726427078,-0.803642809391022,1.84863233566284,-0.214262813329697,-0.874317705631256,1.77303242683411,-0.0650307387113571,-0.0722163766622543,1.83664703369141,-0.0284566655755043,-0.529775857925415,1.84469139575958,-0.0236169267445803,-0.824519395828247,1.85652613639832,0.0112622752785683,-0.891395449638367,1.78038990497589,-0.136830374598503,0.450923711061478,1.91195714473724,-0.283240914344788,-0.038681223988533,1.82521736621857,-0.258186101913452,0.0766173452138901,1.83233690261841,0.2912437915802,0.642320036888122,1.69853091239929,0.227675020694733,0.571298062801361,1.68204843997955">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Joint PositionXYZ|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="True">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="48" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12435" top="2505" width="2355" height="4800">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12435" top="2505" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="75" values="-0.21,-0.0736384764313698,1.88436579704285,-0.135796040296555,0.230713531374931,1.90406966209412,-0.137052968144417,0.522043168544769,1.91169631481171,-0.144852370023727,0.663927316665649,1.8707355260849,-0.299823433160782,0.427637487649918,1.96259784698486,-0.42491626739502,0.25155583024025,2.03788375854492,-0.342426717281342,0.0712147653102875,1.93273901939392,-0.296316742897034,0.0567322857677937,1.88401353359222,0.038711991161108,0.413298279047012,1.89015412330627,0.249188959598541,0.320007652044296,1.8450254201889,0.275719106197357,0.504995584487915,1.70733428001404,0.275938779115677,0.571623802185059,1.70486235618591,-0.199493959546089,-0.0722049325704575,1.85922431945801,-0.202833563089371,-0.514147937297821,1.84734284877777,-0.192086726427078,-0.803642809391022,1.84863233566284,-0.214262813329697,-0.874317705631256,1.77303242683411,-0.0650307387113571,-0.0722163766622543,1.83664703369141,-0.0284566655755043,-0.529775857925415,1.84469139575958,-0.0236169267445803,-0.824519395828247,1.85652613639832,0.0112622752785683,-0.891395449638367,1.78038990497589,-0.136830374598503,0.450923711061478,1.91195714473724,-0.283240914344788,-0.038681223988533,1.82521736621857,-0.258186101913452,0.0766173452138901,1.83233690261841,0.2912437915802,0.642320036888122,1.69853091239929,0.227675020694733,0.571298062801361,1.68204843997955">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Joint PositionXYZ|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="True">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="47" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="14940" top="2460" width="2355" height="4800">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14940" top="2460" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="25">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="75" values="0.01,-0.0736384764313698,1.88436579704285,-0.135796040296555,0.230713531374931,1.90406966209412,-0.137052968144417,0.522043168544769,1.91169631481171,-0.144852370023727,0.663927316665649,1.8707355260849,-0.299823433160782,0.427637487649918,1.96259784698486,-0.42491626739502,0.25155583024025,2.03788375854492,-0.342426717281342,0.0712147653102875,1.93273901939392,-0.296316742897034,0.0567322857677937,1.88401353359222,0.038711991161108,0.413298279047012,1.89015412330627,0.249188959598541,0.320007652044296,1.8450254201889,0.275719106197357,0.504995584487915,1.70733428001404,0.275938779115677,0.571623802185059,1.70486235618591,-0.199493959546089,-0.0722049325704575,1.85922431945801,-0.202833563089371,-0.514147937297821,1.84734284877777,-0.192086726427078,-0.803642809391022,1.84863233566284,-0.214262813329697,-0.874317705631256,1.77303242683411,-0.0650307387113571,-0.0722163766622543,1.83664703369141,-0.0284566655755043,-0.529775857925415,1.84469139575958,-0.0236169267445803,-0.824519395828247,1.85652613639832,0.0112622752785683,-0.891395449638367,1.78038990497589,-0.136830374598503,0.450923711061478,1.91195714473724,-0.283240914344788,-0.038681223988533,1.82521736621857,-0.258186101913452,0.0766173452138901,1.83233690261841,0.2912437915802,0.642320036888122,1.69853091239929,0.227675020694733,0.571298062801361,1.68204843997955">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Joint PositionXYZ|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="True">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="Input">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="107" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="330" top="5925" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="330" top="5925" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Skeleton Count|">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="106" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="315" top="4845" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="315" top="4845" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="106" srcpinname="Y Output Value" dstnodeid="107" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="108" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5340" top="2025" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5340" top="2025" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="25" values="SpineBase,SpineMid,Neck,Head,ShoulderLeft,ElbowLeft,WristLeft,HandLeft,ShoulderRight,ElbowRight,WristRight,HandRight,HipLeft,KneeLeft,AnkleLeft,FootLeft,HipRight,KneeRight,AnkleRight,FootRight,SpineShoulder,HandTipLeft,ThumbLeft,HandTipRight,ThumbRight">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="108" srcpinname="Output String" dstnodeid="41" dstpinname="Input String">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="109" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7275" top="1755" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7275" top="1755" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="75" values="-0.56,-0.08,1.9,-0.135796040296555,0.230713531374931,1.90406966209412,-0.137052968144417,0.522043168544769,1.91169631481171,-0.144852370023727,0.663927316665649,1.8707355260849,-0.299823433160782,0.427637487649918,1.96259784698486,-0.43,0.25155583024025,2.03788375854492,-0.48,0.0712147653102875,1.93273901939392,0.85,2,1.88401353359222,0.038711991161108,0.413298279047012,1.89015412330627,0.249188959598541,0.320007652044296,1.8450254201889,0.275719106197357,0.504995584487915,1.70733428001404,0.275938779115677,0.571623802185059,1.70486235618591,-0.199493959546089,6.92,1.85922431945801,-0.202833563089371,-0.514147937297821,1.84734284877777,-0.192086726427078,-0.803642809391022,1.84863233566284,-0.214262813329697,-0.874317705631256,1.77303242683411,-0.0650307387113571,-0.0722163766622543,1.83664703369141,-0.0284566655755043,-0.529775857925415,1.84469139575958,-0.0236169267445803,-0.824519395828247,1.85652613639832,0.0112622752785683,-1.55,1.78038990497589,-0.136830374598503,0.450923711061478,1.91195714473724,-0.283240914344788,-0.038681223988533,1.82521736621857,-0.258186101913452,0.0766173452138901,1.83233690261841,0.2912437915802,0.642320036888122,1.69853091239929,0.227675020694733,0.571298062801361,1.68204843997955">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="109" srcpinname="Y Output Value" dstnodeid="40" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="110" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9900" top="1665" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9900" top="1665" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="75" values="-0.43,-0.08,1.87,-0.135796040296555,0.230713531374931,1.90406966209412,-0.137052968144417,0.522043168544769,1.91169631481171,-0.144852370023727,0.663927316665649,1.8707355260849,-0.299823433160782,0.427637487649918,1.96259784698486,-0.42491626739502,0.25155583024025,2.03788375854492,-0.342426717281342,0.0712147653102875,1.93273901939392,-0.02,0.0567322857677937,1.88401353359222,0.09,0.413298279047012,1.89015412330627,0.24,0.320007652044296,1.8450254201889,0.275719106197357,0.504995584487915,1.70733428001404,0.275938779115677,0.571623802185059,1.70486235618591,-0.199493959546089,-0.0722049325704575,1.85922431945801,-0.202833563089371,-0.514147937297821,1.84734284877777,-0.192086726427078,-0.803642809391022,1.84863233566284,-0.214262813329697,-0.874317705631256,1.77303242683411,-0.0650307387113571,-0.0722163766622543,1.83664703369141,-0.0284566655755043,-0.529775857925415,1.84469139575958,-0.0236169267445803,-0.824519395828247,1.85652613639832,0.0112622752785683,-0.891395449638367,1.78038990497589,-0.136830374598503,0.450923711061478,1.91195714473724,-0.283240914344788,-0.038681223988533,1.82521736621857,-0.258186101913452,0.0766173452138901,1.83233690261841,0.2912437915802,0.642320036888122,1.69853091239929,0.227675020694733,0.571298062801361,1.68204843997955">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="110" srcpinname="Y Output Value" dstnodeid="46" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="111" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12435" top="1500" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12435" top="1500" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="75" values="-0.21,-0.0736384764313698,1.88436579704285,-0.135796040296555,0.230713531374931,1.90406966209412,-0.137052968144417,0.522043168544769,1.91169631481171,-0.144852370023727,0.663927316665649,1.8707355260849,-0.299823433160782,0.427637487649918,1.96259784698486,-0.42491626739502,0.25155583024025,2.03788375854492,-0.342426717281342,0.0712147653102875,1.93273901939392,-0.296316742897034,0.0567322857677937,1.88401353359222,0.038711991161108,0.413298279047012,1.89015412330627,0.249188959598541,0.320007652044296,1.8450254201889,0.275719106197357,0.504995584487915,1.70733428001404,0.275938779115677,0.571623802185059,1.70486235618591,-0.199493959546089,-0.0722049325704575,1.85922431945801,-0.202833563089371,-0.514147937297821,1.84734284877777,-0.192086726427078,-0.803642809391022,1.84863233566284,-0.214262813329697,-0.874317705631256,1.77303242683411,-0.0650307387113571,-0.0722163766622543,1.83664703369141,-0.0284566655755043,-0.529775857925415,1.84469139575958,-0.0236169267445803,-0.824519395828247,1.85652613639832,0.0112622752785683,-0.891395449638367,1.78038990497589,-0.136830374598503,0.450923711061478,1.91195714473724,-0.283240914344788,-0.038681223988533,1.82521736621857,-0.258186101913452,0.0766173452138901,1.83233690261841,0.2912437915802,0.642320036888122,1.69853091239929,0.227675020694733,0.571298062801361,1.68204843997955">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="111" srcpinname="Y Output Value" dstnodeid="48" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="112" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="14940" top="1515" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14940" top="1515" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="75" values="0.01,-0.0736384764313698,1.88436579704285,-0.135796040296555,0.230713531374931,1.90406966209412,-0.137052968144417,0.522043168544769,1.91169631481171,-0.144852370023727,0.663927316665649,1.8707355260849,-0.299823433160782,0.427637487649918,1.96259784698486,-0.42491626739502,0.25155583024025,2.03788375854492,-0.342426717281342,0.0712147653102875,1.93273901939392,-0.296316742897034,0.0567322857677937,1.88401353359222,0.038711991161108,0.413298279047012,1.89015412330627,0.249188959598541,0.320007652044296,1.8450254201889,0.275719106197357,0.504995584487915,1.70733428001404,0.275938779115677,0.571623802185059,1.70486235618591,-0.199493959546089,-0.0722049325704575,1.85922431945801,-0.202833563089371,-0.514147937297821,1.84734284877777,-0.192086726427078,-0.803642809391022,1.84863233566284,-0.214262813329697,-0.874317705631256,1.77303242683411,-0.0650307387113571,-0.0722163766622543,1.83664703369141,-0.0284566655755043,-0.529775857925415,1.84469139575958,-0.0236169267445803,-0.824519395828247,1.85652613639832,0.0112622752785683,-0.891395449638367,1.78038990497589,-0.136830374598503,0.450923711061478,1.91195714473724,-0.283240914344788,-0.038681223988533,1.82521736621857,-0.258186101913452,0.0766173452138901,1.83233690261841,0.2912437915802,0.642320036888122,1.69853091239929,0.227675020694733,0.571298062801361,1.68204843997955">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="112" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="116" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1905" top="6300" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1905" top="6300" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|User Index|">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="115" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1890" top="5220" width="780" height="495">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1890" top="5220" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" values="2034,2035">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="115" srcpinname="Y Output Value" dstnodeid="116" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="118" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3495" top="5835" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3495" top="5835" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="PositionXYZ">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="117" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3495" top="4755" width="795" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3495" top="4755" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" values="0.285437285900116,-0.372550427913666,2.2960376739502">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="117" srcpinname="Y Output Value" dstnodeid="118" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>

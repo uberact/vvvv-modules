@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Users\Gareth Griffiths\Documents\GitHub\vvvv-modules\Kinect2\Kinect2Skeleton\AxisGrid (DX11).v4p" systemname="AxisGrid (DX11)" filename="D:\GitHub\vvvv-modules\AxisGrid (DX11)\AxisGrid (DX11).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.0.dtd" >
+   <PATCH nodename="D:\GitHub\PathPlotter\PathVectorPlotter\Nodes\Modules\AxisGrid (DX11).v4p" systemname="AxisGrid (DX11)" filename="D:\GitHub\vvvv-modules\AxisGrid (DX11)\AxisGrid (DX11).v4p">
    <BOUNDS type="Window" left="3330" top="4065" width="16830" height="12825">
    </BOUNDS>
    <NODE id="34" nodename="Transform (Transform 3d)" systemname="Transform (Transform 3d)">
@@ -41,7 +41,7 @@
    </PIN>
    <PIN pinname="Spread Count" slicecount="1" values="10">
    </PIN>
-   <PIN pinname="Width" slicecount="1" visible="1" values="2.222">
+   <PIN pinname="Width" slicecount="1" values="2.222" visible="1">
    </PIN>
    <PIN pinname="Alignment" slicecount="1" values="Centered">
    </PIN>
@@ -609,25 +609,5 @@
    <LINK srcnodeid="88" srcpinname="Output" dstnodeid="67" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="88" srcpinname="Output" dstnodeid="66" dstpinname="Input 2">
-   </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="89" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11835" top="1275" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="11835" top="1275" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="89" srcpinname="Y Output Value" dstnodeid="82" dstpinname="Enabled">
    </LINK>
    </PATCH>

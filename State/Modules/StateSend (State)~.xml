@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="D:\GitHub\vvvv-modules\State\Modules\StateSend (State).v4p" systemname="SendState (State)" filename="D:\GitHub\MSK-3-RFU-RugbyFace\Touch-Base_RugbyFace\Application\RugbyFace\Modules\SendState (State).v4p">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Users\Gareth Griffiths\Documents\GitHub\PartyGame\PartyGame\Nodes\Modules\State\StateSend (State).v4p" systemname="SendState (State)" filename="D:\GitHub\MSK-3-RFU-RugbyFace\Touch-Base_RugbyFace\Application\RugbyFace\Modules\SendState (State).v4p">
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1515" top="2280" width="1224" height="276">
    </BOUNDS>
@@ -25,7 +25,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="3900" top="1500" width="945" height="255">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="State">
+   <PIN pinname="Input String" slicecount="1" values="|Send State|">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="send">
    </PIN>
@@ -80,7 +80,7 @@
    </LINK>
    <BOUNDS type="Window" left="5220" top="8790" width="8835" height="6615">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="31.9.0">
    </PACK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="6">
    <BOUNDS type="Node" left="3735" top="2220" width="100" height="100">

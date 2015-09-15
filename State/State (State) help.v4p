@@ -1,6 +1,6 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
-   <PATCH nodename="C:\Users\Gareth Griffiths\Documents\GitHub\State\State (State) help.v4p" systemname="State Help (State)" filename="C:\Users\Gareth Griffiths\Documents\GitHub\State Help\State Help (State).v4p">
-   <BOUNDS type="Window" left="0" top="0" width="14400" height="15600">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\Users\Gareth\Documents\GitHub\vvvv-modules\State\State (State) help.v4p" systemname="State Help (State)" filename="C:\Users\Gareth Griffiths\Documents\GitHub\State Help\State Help (State).v4p" scrollx="435" scrolly="0">
+   <BOUNDS type="Window" left="0" top="-105" width="18225" height="15705">
    </BOUNDS>
    <NODE systemname="State (State)" filename="State (State).v4p" nodename="State (State)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2520" top="8445" width="7965" height="270">
@@ -8,7 +8,7 @@
    <PIN pinname="Hit List" visible="1">
    </PIN>
    </NODE>
-   <PACK Name="addonpack" Version="31.9.0">
+   <PACK Name="addonpack" Version="33.7.0">
    </PACK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="1" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2535" top="9255" width="795" height="240">

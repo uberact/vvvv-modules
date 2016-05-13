@@ -1,0 +1,195 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Users\Gareth Griffiths\Documents\GitHub\Touch-Base\Touch Base-TLT-1-T-TheLivingTapestry\TB Subpatches\TuioInput.v4p" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Subpatches\Tuio Transform.v4p" systemname="Tuio Transform">
+   <BOUNDS height="8925" left="13155" top="2865" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="Hidden" id="7" nodename="UDP (Network Server)" systemname="UDP (Network Server String)">
+   <BOUNDS height="100" left="705" top="1698" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Local Port" slicecount="1" values="3333">
+   </PIN>
+   <PIN pinname="Queue Mode" slicecount="1" values="Concatenate">
+   </PIN>
+   <BOUNDS type="Box" left="705" top="1698">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="Hidden" filename="%VVVV%\addonpack\plugins\TUIODecoder.dll" id="6" nodename="TUIODecoder (Network 1.0)" systemname="TUIODecoder (Network 1.0 Legacy)">
+   <BOUNDS height="276" left="705" top="2082" type="Node" width="1800">
+   </BOUNDS>
+   <PIN pinname="TUIO Packet String" visible="1">
+   </PIN>
+   <BOUNDS left="705" top="2082" type="Box">
+   </BOUNDS>
+   <PIN pinname="Session ID" visible="1">
+   </PIN>
+   <PIN pinname="Position X" visible="1">
+   </PIN>
+   <PIN pinname="Position Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="6" dstpinname="TUIO Packet String" srcnodeid="7" srcpinname="Output">
+   </LINK>
+   <NODE componentmode="Hidden" id="4" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
+   <BOUNDS height="270" left="705" top="2934" type="Node" width="990">
+   </BOUNDS>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="3" nodename="Vector (3d Join)" systemname="Vector (3d Join)">
+   <BOUNDS height="270" left="705" top="5124" type="Node" width="3675">
+   </BOUNDS>
+   <BOUNDS height="0" left="345" top="5127" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="2340" top="6240" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="1" nodename="ApplyTransform (Transform)" systemname="ApplyTransform (Transform)">
+   <BOUNDS height="276" left="2523" top="4554" type="Node" width="3612">
+   </BOUNDS>
+   <BOUNDS height="0" left="2523" top="4554" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="4260" top="3615" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="X UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="Y UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="X Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Y Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Transform" slicecount="1" visible="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" id="0" nodename="Vector (3d Split)" systemname="Vector (3d Split)">
+   <BOUNDS height="270" left="705" top="3750" type="Node" width="2490">
+   </BOUNDS>
+   <BOUNDS height="0" left="1140" top="3750" type="Box" width="0">
+   </BOUNDS>
+   <BOUNDS height="0" left="6705" top="4320" type="Window" width="0">
+   </BOUNDS>
+   <PIN pinname="XYZ" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="Z" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="8" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="2535" top="945" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="2535" top="945" type="Box" width="1095">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="AspectRatio">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="1" dstpinname="Transform" srcnodeid="8" srcpinname="Output Node">
+   </LINK>
+   <NODE componentmode="InABox" id="9" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="705" top="5760" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="705" top="5760" type="Box" width="765">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="iXY">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="9" dstpinname="Y Input Value" srcnodeid="3" srcpinname="XYZ">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Session ID" dstnodeid="4" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Position X" dstnodeid="4" dstpinname="Y" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Position Y" dstnodeid="4" dstpinname="Z" linkstyle="VHV">
+   <LINKPOINT x="1233" y="2646">
+   </LINKPOINT>
+   <LINKPOINT x="1473" y="2646">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y" dstnodeid="1" dstpinname="X UnTransformed" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Z" dstnodeid="1" dstpinname="Y UnTransformed" linkstyle="PolyLine">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="X" dstnodeid="3" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="X Transformed" dstnodeid="3" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Y Transformed" dstnodeid="3" dstpinname="Z">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="XYZ" dstnodeid="0" dstpinname="XYZ">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="870" top="945" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="870" top="945" width="792" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="3333">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Local Port|">
+   </PIN>
+   <PIN pinname="Pin Visibility" slicecount="1" values="False">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Local Port">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="13" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="4230" top="945" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4230" top="945" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Enable">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Y Output Value" dstnodeid="7" dstpinname="Enable" linkstyle="VHV">
+   <LINKPOINT x="4230" y="1513">
+   </LINKPOINT>
+   <LINKPOINT x="765" y="1578">
+   </LINKPOINT>
+   </LINK>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
+   </PATCH>

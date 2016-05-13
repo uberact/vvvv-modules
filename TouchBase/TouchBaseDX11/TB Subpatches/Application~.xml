@@ -1,0 +1,95 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta32.1.dtd" >
+   <PATCH nodename="C:\Users\Gareth Griffiths\Documents\GitHub\Touch-Base\Touch Base-TLT-1-T-TheLivingTapestry\TB Subpatches\Application.v4p" filename="C:\Program Files\VVVV\VVVV Install Pack\Touch Base\Subpatches\Application.v4p" systemname="Application">
+   <BOUNDS height="15600" left="0" top="0" type="Window" width="17940">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="0" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="0" left="990" top="1455" type="Node" width="0">
+   </BOUNDS>
+   <BOUNDS height="240" left="990" top="1455" type="Box" width="765">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="iXY">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="990" top="3810" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="990" top="3810" type="Box" width="795">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="Layer">
+   </PIN>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (Node)" systemname="IOBox (Node)">
+   <BOUNDS height="100" left="1965" top="1455" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="255" left="1965" top="1455" type="Box" width="975">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Descriptive Name" slicecount="1" values="AspectRatio">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="Reset.v4p" id="9" nodename="Reset.v4p" systemname="Reset">
+   <BOUNDS height="100" left="2970" top="1455" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <BOUNDS left="2970" top="1455" type="Box">
+   </BOUNDS>
+   <BOUNDS height="3510" left="5385" top="3375" type="Window" width="3375">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="TEMPLATE" filename="..\Application\TEMPLATE.v4p" componentmode="Hidden" id="10" nodename="..\Application\TEMPLATE.v4p">
+   <BOUNDS type="Node" left="990" top="2535" width="2040" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="990" top="2535" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16500" top="2910" width="9000" height="6000">
+   </BOUNDS>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="AspectRatio" visible="1">
+   </PIN>
+   <PIN pinname="iXY" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Renderer Background" visible="1" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Reset" dstnodeid="10" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Output Node" dstnodeid="10" dstpinname="AspectRatio">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Y Output Value" dstnodeid="10" dstpinname="iXY">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Layer" dstnodeid="2" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="addonpack" Version="31.9.0">
+   </PACK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="12">
+   <BOUNDS type="Node" left="2385" top="3645" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2385" top="3645" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Renderer Background|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Renderer Background" dstnodeid="12" dstpinname="Color Input">
+   </LINK>
+   </PATCH>

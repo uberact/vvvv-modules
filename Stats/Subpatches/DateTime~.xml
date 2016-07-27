@@ -1,0 +1,211 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\Users\garet_000\Documents\GitHub\MG-15-ILTS\TouchApp\TouchBase\Application\ILTS-TouchApp\Subpatches\Stats\Subpatches\DateTime.v4p" scrollx="0" scrolly="-360" systemname="DateTime" filename="C:\Users\garet_000\Documents\GitHub\MG-15-ILTS\TouchApp\TouchBase\Application\ILTS-TouchApp\Subpatches\Stats\Subpatches\DateTime.v4p">
+   <BOUNDS type="Window" left="9230" top="1860" width="9000" height="7690">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE id="0" nodename="Gregorian (Astronomy Split)" systemname="Gregorian (Astronomy Split)">
+   <BOUNDS height="0" left="1720" top="980" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Time" visible="1" slicecount="1" values="42492.1190504745">
+   </PIN>
+   <PIN pinname="Second" visible="1">
+   </PIN>
+   <PIN pinname="Minute" visible="1">
+   </PIN>
+   <PIN pinname="Hour" visible="1">
+   </PIN>
+   <PIN pinname="Day" visible="1">
+   </PIN>
+   <PIN pinname="Month" visible="1">
+   </PIN>
+   <PIN pinname="Year" visible="1">
+   </PIN>
+   <PIN pinname="DayOfWeek" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="1" nodename="CurrentTime (Astronomy)" systemname="CurrentTime (Astronomy)">
+   <BOUNDS height="0" left="790" top="330" type="Node" width="0">
+   </BOUNDS>
+   <PIN pinname="Current Time" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="1" srcpinname="Current Time" dstnodeid="0" dstpinname="Time">
+   </LINK>
+   <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="2">
+   <BOUNDS type="Node" left="2570" top="1770" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Year" dstnodeid="2" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Month" dstnodeid="2" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Day" dstnodeid="2" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="2560" top="2320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Output" dstnodeid="3" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="2190" top="4380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" values="Dash">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="3" values="2016,5,2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="5">
+   <BOUNDS type="Node" left="2210" top="5010" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Intersperse" slicecount="1" values="UnderScore">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="03,06,09">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output" dstnodeid="5" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="Zip (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Zip (Value)" componentmode="Hidden" id="8">
+   <BOUNDS type="Node" left="1430" top="1770" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1430" top="1770">
+   </BOUNDS>
+   </NODE>
+   <NODE systemname="AsString (Value)" nodename="AsString (Value)" componentmode="Hidden" id="7">
+   <BOUNDS type="Node" left="1430" top="2320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="SubType" slicecount="1" values="|Integer (0 .. MaxInt)|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="8" srcpinname="Output" dstnodeid="7" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Add (String Spectral)" nodename="Add (String Spectral)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="1430" top="4380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Intersperse" slicecount="1" values="Colon">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="3" values="3,6,5">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Second" dstnodeid="8" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Minute" dstnodeid="8" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Hour" dstnodeid="8" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="9" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2230" top="5630" width="4070" height="590">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2230" top="5630" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Output">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output" dstnodeid="9" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="Pad (String)" nodename="Pad (String)" componentmode="Hidden" id="10">
+   <BOUNDS type="Node" left="2560" top="3580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="2016-5-2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Padding" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Align" slicecount="1" values="Right">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Output" dstnodeid="10" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="12" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2900" top="2750" width="380" height="720">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2900" top="2750" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="4,2,2">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Vector Size" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="|0, 0, 0|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Size">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="4" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Pad (String)" nodename="Pad (String)" componentmode="Hidden" id="15">
+   <BOUNDS type="Node" left="1430" top="3580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="3:5:59">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Padding" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Align" slicecount="1" values="Right">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" visible="1" values="2">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output" dstnodeid="15" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="15" srcpinname="Output" dstnodeid="6" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output" dstnodeid="5" dstpinname="Input 2">
+   </LINK>
+   </PATCH>

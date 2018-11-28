@@ -1,0 +1,117 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50beta38.dtd" >
+   <PATCH nodename="C:\Users\garet\Documents\GitHub\vvvv-modules\ParentInfo (vvvv).v4p" systemname="ParentInfo (vvvv)" filename="C:\Users\garet\Documents\GitHub\vvvv-modules\ParentInfo (vvvv).v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="930" top="4260" width="7815" height="9225">
+   </BOUNDS>
+   <PACK Name="dx11" Version="1.3.1.1">
+   </PACK>
+   <PACK Name="vvvv-Message" Version="2.9.10">
+   </PACK>
+   <PACK Name="addonpack" Version="38.0.0">
+   </PACK>
+   <NODE nodename="PatchAlias (VVVV)" id="5" systemname="PatchAlias (VVVV)">
+   <BOUNDS type="Node" left="1410" top="1515" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Parent Level" visible="1">
+   </PIN>
+   <PIN pinname="Patch" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="GetPatch (VVVV)" id="4" systemname="GetPatch (VVVV)">
+   <BOUNDS type="Node" left="1410" top="2385" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Patch" visible="1">
+   </PIN>
+   <PIN pinname="Patch Description" visible="1">
+   </PIN>
+   <PIN pinname="Patch Path" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Patch" dstnodeid="4" dstpinname="Patch">
+   </LINK>
+   <NODE nodename="IOBOX (VALUE ADVANCED)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Node" left="1410" top="1050" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Window" left="9480" top="5670" width="215" height="160">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1410" top="1050" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Parent Level|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Parent Level">
+   </LINK>
+   <NODE systemname="XPath (XML)" nodename="XPath (XML)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="1395" top="3450" width="1140" height="270">
+   </BOUNDS>
+   <PIN pinname="XML Input" visible="1" slicecount="1" values="|&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;|">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1665" top="2970" width="1710" height="285">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1665" top="2970" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" values="/PATCH/@nodename">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output String" dstnodeid="34" dstpinname="XPath Query">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="32" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="2925" top="4905" width="4200" height="315">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2925" top="4905" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="|&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;|">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Filename">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="32" dstpinname="Input String">
+   </LINK>
+   <NODE systemname="FileName (File Split)" nodename="FileName (File Split)" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="1380" top="4320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" visible="1">
+   </PIN>
+   <PIN pinname="Shortname" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="Output" dstnodeid="38" dstpinname="Filename">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="39" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="1740" top="4905" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1740" top="4905" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Patch name|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="Shortname" dstnodeid="39" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Patch Description" dstnodeid="34" dstpinname="XML Input">
+   </LINK>
+   </PATCH>
